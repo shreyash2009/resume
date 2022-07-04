@@ -16,9 +16,9 @@
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
   </head>
   <body>
-    <header>
+    <header >
       <nav>
-        <div class="logo"><h3>Shreyash</h3></div>
+        <div class="logo"><h3  >Shreyash</h3></div>
         <input type="checkbox" id="click" />
         <label for="click" class="menu-btn">
           <i class="fas fa-bars"></i>
@@ -42,10 +42,7 @@
             <p class="hlw">Hi, I am</p>
             <h5>Shreyash Chaple,</h5>
             <p class="specs">Web devloper, Programmer, Tech Enthusiast</p>
-            <p>
-              Good experience in web design and devlopment knowledge and
-              producing quality work.
-            </p>
+          
             <div class="project_container">
             <div class="projects">
               <h6 class="numb">7+</h6>
@@ -57,12 +54,14 @@
           </div>
 
             <div class="btn">
-              <button>Download CV</button>
-              <button>Contact Me</button>
+              <button><a href="media/Shreyash Chaple Resume.pdf" download="Shreyash_Chaple_resume" style="text-decoration: none; color:black;">Resume</a></button>
+              <button > <a href="#Portfolio"> Contact Me</a></button>
+              <button id="Dark-btn"> Dark Mode </button>
+              
             </div>
           </div>
           <div class="devpic">
-            <img src="media/employee.png" alt="mY Pic" width="500vw" />
+            <img src="media/shreyash-lightpng.png" alt="mY Pic" width="500vw" />
           </div>
         </div>
       </section>
@@ -79,8 +78,8 @@
               I am Shreyash Chaple - A frontend devloper and Programmer
               originally from Nagpur. Studying in Vishwakarma Institute Of
               Information Technology, Pune. Worked on several projects in Coding
-              forum-VIIT. Good knowledge about HTML, CSS, JAVASCRIPT, C++, JAVA
-              and MySQL. <br />
+              forum-VIIT. Good knowledge about <em>HTML, CSS, JAVASCRIPT, C++, JAVA, React
+                and MySQL.</em>  <br />
               <br />
               Love sharing and contributing to the tech community. I'm
               consistently engaging and advocating for open and inclusive
@@ -89,7 +88,7 @@
               When I'm not coding, you can find me exploring places and eating
               new dishes. <br />
               <br />
-              You can catch me on <a href="">LinkedIn</a>, <a href=""> GitHub</a>, <a href="">Instagram</a> and <a href=""> Twitter</a>.
+              You can catch me on <em> <a href="https://www.linkedin.com/in/shreyash-chaple-2b45aa213" style="font-weight:900 ; color: purple;">LinkedIn</a>, <a href="https://github.com/shreyash2009"" style="font-weight:900 ; color: purple;"> GitHub</a>, <a href="https://www.instagram.com/shreyash_20.09?r=nametag" style="font-weight:900 ; color: purple;">Instagram</a> and <a href="" style="font-weight:900 ; color: purple;"> Twitter</a></em>.
             </p>
           </div>
           <div class="img1">
@@ -131,8 +130,8 @@
                 <span class="skill_per skill_JAVASCRIPT"></span>
               </div>
               <div class="skill_title">
-                <h5 class="skillname">MySQL</h5>
-                <span class="skill_number">40%</span>
+                <h5 class="skillname">React</h5>
+                <span class="skill_number">50%</span>
               </div>
               <div class="skill_bar">
                 <span class="skill_per skill_MySQL"></span>
@@ -188,7 +187,7 @@
 <div class="ideas-container">
     <div class="box">
       <div class="img">
-        <img src="https://images.pexels.com/photos/2506988/pexels-photo-2506988.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img">
+        <img src="media/home08.jpg" alt="img">
       </div>
       <div class="details">
         <div class="content">
@@ -200,7 +199,7 @@
 
     <div class="box">
       <div class="img">
-        <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img">
+        <img src="media/home06.jpg" alt="img">
       </div>
       <div class="details">
         <div class="content">
@@ -212,7 +211,7 @@
 
     <div class="box">
       <div class="img">
-        <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img">
+        <img src="media/resume2.jpg" alt="img">
       </div>
       <div class="details">
         <div class="content">
@@ -225,12 +224,12 @@
     
     <div class="box">
       <div class="img">
-        <img src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img">
+        <img src="media/NGO@.jpg" alt="img">
       </div>
       <div class="details">
         <div class="content">
           <h4>NGO WEBSITE</h4>
-          <p> Added new solution how you cn contribute in our NGO and information about NGO.</p>
+          <p>Made a NGO website for devlopment battle. Added new solution how you cn contribute in our NGO and information about NGO.</p>
         </div>
       </div>
     </div>
@@ -278,4 +277,40 @@
     </main>
   </body>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script >const dark_btn = document.querySelector('#Dark-btn');
+    const navbar = document.querySelector('header');
+    const logo = document.querySelector('.logo');
+    const body = document.querySelector('body');
+    const numbs = document.querySelectorAll('.numb');
+    const subs = document.querySelectorAll('.sub');
+    const devpic = document.querySelectorAll('.devpic');
+    dark_btn.addEventListener('click', ()=>{
+        navbar.classList.toggle('dark');
+        logo.classList.toggle('dark');
+        body.classList.toggle('dark');
+        numbs.forEach((numb)=>{
+          numb.classList.toggle('dark');
+        });
+        subs.forEach((sub)=>{
+          sub.classList.toggle('dark');
+        });
+
+
+        const initialText = 'Dark Mode';
+
+  if (dark_btn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+    dark_btn.textContent = 'Light Mode';
+  } else {
+    dark_btn.textContent = initialText;
+  }
+
+        
+    });
+    
+
+    
+    
+    
+    </script>
+
 </html>
