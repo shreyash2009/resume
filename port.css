@@ -5,6 +5,13 @@
     padding: 0%;
     box-sizing: border-box;
 }
+body{
+    transition: all 0.3s ;
+}
+body.dark{
+    background-color: black;
+    color: white;
+}
 /* NAVIGATION BAR PART        */
 header{
     height: 12vh;;
@@ -14,9 +21,12 @@ header{
     position: fixed;
     z-index: 22;
 }
+header.dark{
+    background-color: black;           /*Dark mode*/
+}
 header nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 header nav .logo{
@@ -29,8 +39,12 @@ header nav .logo h3{
     letter-spacing: 5px;
     font-family: 'Permanent Marker', cursive;
     font-size: 2rem;
+    cursor: pointer;
 }
-
+header nav .logo.dark{
+     color: #8f00ff;
+     text-shadow: 5px 8px 15px white;
+}
 nav .menu-btn i{
     font-size: 1.5rem;
     margin-top: 1vh;
@@ -53,16 +67,18 @@ header nav ul li a{
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
+    transition: color 0.9s;
 }
 header nav ul li a:hover{
     color: yellow;
-    transition-delay: 0.1;
+    text-shadow: 2px 5px 7px rgb(255, 255, 255);
+
 }
 #click{
     display: none;
 }
 /* responsive part  */
-@media (max-width: 690px){
+@media (max-width: 900px){
     header nav ul{
         position: fixed;
         top: 12vh;
@@ -168,10 +184,19 @@ header nav ul li a:hover{
 .devpic{
     background-color: #a026ff;
     border-radius:  96%;
-    padding-top: 1.3rem;
+    padding-top: 0.01rem;
     height: 60vh;
     margin-top: 8vh;
+    padding-bottom: 1.8rem;
 }
+
+/* dark mode part  */
+
+.project_container .projects span.dark{
+    color: white;
+}
+
+
 @media (max-width:600px) {
     .devpic{
         height: 70%;
@@ -194,11 +219,30 @@ header nav ul li a:hover{
     cursor: pointer;
     background-color: #d299ff;
     font-size: 2.3vh;
+    transition: all  0.5s;
 }
 
 .btn button:hover{
     background-color: #a026ff;
     transform: translate(-0.3%, -.3%);
+    color: white;
+}
+.btn button a{
+    border-radius: 7px;
+    margin: 10px 4px 7px 4px;
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: #d299ff;
+    font-size: 2.3vh;
+    transition: all  0.5s;
+    text-decoration: none;
+}
+
+.btn button a:hover{
+    background-color: #a026ff;
+    transform: translate(-0.3%, -.3%);
+    color: white;
 }
 /* ABOUT ME  */
 #About_pg{
@@ -387,7 +431,7 @@ h2{
     width: 60%;
 }
 .container2 .box .skill_MySQL{
-    width:40%;
+    width:50%;
 }
 .container2 .box .skill_dsa{
     width: 45%;
@@ -537,11 +581,12 @@ h2{
       justify-content: center;
       bottom: 0;
       width: 100vw;
-      height: 20vh;
+      height: 22vh;
       background-color: #8f00ff;
       color: white;
       margin-top: 50px;
       font-family: 'Poppins', sans-serif;
+      padding-bottom: 14px;
   }
   .foot .menu ul{
       list-style: none;
