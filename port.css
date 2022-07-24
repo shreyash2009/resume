@@ -8,6 +8,9 @@
 body{
     transition: all 0.3s ;
 }
+a{
+    text-decoration : none;
+}
 body.dark{
     background-color: black;
     color: white;
