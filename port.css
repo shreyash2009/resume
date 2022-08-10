@@ -46,7 +46,7 @@ header nav .logo h3{
 }
 header nav .logo.dark{
      color: #8f00ff;
-     text-shadow: 5px 8px 15px white;
+     text-shadow: 4px 3px 3px white;
 }
 nav .menu-btn i{
     font-size: 1.5rem;
@@ -541,6 +541,9 @@ h2{
 .ideas-container .box .details .content h4{
     color: yellow;
     margin-bottom: 5px;
+}
+.ideas-container .box .details .content h4 a{
+    color: yellow;
 }
 @media (max-width: 940px){
     .ideas-container .box{
