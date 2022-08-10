@@ -544,7 +544,7 @@ h2{
 }
 .ideas-container .box .details .content h4 a{
     text-decoration : none;
-    color: yellow;
+    color: yellow !important ;
 }
 @media (max-width: 940px){
     .ideas-container .box{
